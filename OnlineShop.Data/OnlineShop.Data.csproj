@@ -48,6 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Infrastructor\DbFactory.cs" />
+    <Compile Include="Infrastructor\Disposable.cs" />
+    <Compile Include="Infrastructor\IDbFactory.cs" />
+    <Compile Include="Infrastructor\IRepository.cs" />
+    <Compile Include="Infrastructor\IUnitOfWork.cs" />
+    <Compile Include="Infrastructor\RepositoryBase.cs" />
+    <Compile Include="Infrastructor\UnitOfWork.cs" />
+    <Compile Include="OnlineShopDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +67,13 @@
       <Project>{75eda3b9-4af6-4717-a8ab-64b6eeea73cd}</Project>
       <Name>OnlineShop.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OnlineShop.Model\OnlineShop.Model.csproj">
+      <Project>{3f0f158c-6f93-460a-a013-051202b2d9f8}</Project>
+      <Name>OnlineShop.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reponsitories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
